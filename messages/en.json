@@ -1,0 +1,36 @@
+{
+  "layout": {
+    "navbar": {
+      "starter": "Starter",
+      "pricing": "Pricing",
+      "tools": "Tools",
+      "changelog": "Changelog",
+      "blog": "Blog",
+      "docs": "Docs",
+      "menuButton": {
+        "toggleNavigation": "Toggle navigation"
+      }
+    },
+    "footer": {
+      "terms": "Terms of Use",
+      "privacy": "Privacy",
+      "license": "License",
+      "partnership": "Partnership",
+      "languageSelector": {
+        "label": "Language",
+        "options": {
+          "english": "English",
+          "spanish": "Spanish",
+          "french": "French",
+          "german": "German",
+          "italian": "Italian"
+        }
+      }
+    },
+    "cookieBanner": {
+      "message": "We use tasty <link>cookies</link> to personalize your site experience and analyze site traffic.",
+      "accept": "Accept",
+      "decline": "Decline"
+    }
+  }
+}

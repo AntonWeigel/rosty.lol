@@ -1,0 +1,9 @@
+import { Template } from 'tinacms';
+
+import { pricingSectionHeaderField, sectionIdField } from '@/tina/fields';
+
+export const subscriptionTemplate: Template = {
+  name: 'subscription',
+  label: 'Subscription Section',
+  fields: [sectionIdField, pricingSectionHeaderField],
+};

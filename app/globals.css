@@ -1,0 +1,147 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Custom Colors from colors.ts */
+  --color-highlight: #ffc233;
+  --color-accent: #7a5cfa;
+  --color-neutral: #b8bec9;
+  --color-primary-dark: #1f212c;
+  --color-secondary-dark: #2c2e3a;
+  --color-primary-light: #f5f5f5;
+  --color-secondary-light: #ebebeb;
+  --color-success: #3a9d7a;
+  --color-destructive: #de5245;
+
+  /* Animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-vote-shake: vote-shake 0.25s ease-in-out;
+  --animate-scale-pop: scale-pop 400ms ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes vote-shake {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-2px);
+    }
+    75% {
+      transform: translateY(2px);
+    }
+  }
+  @keyframes scale-pop {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.2);
+    }
+    60% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+/* Custom Container Utility to match previous config behavior */
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1280px;
+  }
+  @media (width >= 1536px) {
+    max-width: 1400px;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  button,
+  [role='button'] {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background-color: var(--color-highlight);
+    color: var(--color-primary-light);
+  }
+
+  /* Chart colors */
+  :root {
+    --chart-1: 32 91% 61%;
+    --chart-2: 160 36% 52%;
+    --chart-3: 210 36% 58%;
+    --chart-4: 39 100% 70%;
+    --chart-5: 348 70% 55%;
+  }
+  .dark {
+    --chart-1: 24 92% 70%;
+    --chart-2: 148 25% 55%;
+    --chart-3: 210 45% 65%;
+    --chart-4: 45 100% 65%;
+    --chart-5: 350 70% 65%;
+  }
+
+  /* Code block theming support */
+  html.dark .shiki,
+  html.dark .shiki span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Hide scrollbars but keep scrolling functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

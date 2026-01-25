@@ -1,0 +1,101 @@
+---
+seo:
+  title: Get started
+  description: >-
+    Quickstart guide for setting up the SaaS template locally. Learn how to
+    install dependencies, run the dev server, and explore the project structure.
+  author: John Doe
+  keywords: >-
+    saas starter, quickstart, next.js setup, cms setup, developer onboarding,
+    boilerplate docs
+  robots: true
+  openGraph:
+    locale: en_US
+    type: article
+    siteName: Demo Starter
+    updatedTime: 2025-08-21T22:00:00.000Z
+    title: Get started
+    description: 'Install, run, and explore your SaaS template in minutes'
+    image:
+      url: /1280x640.webp
+      width: 1280
+      height: 640
+      alt: Get started with the SaaS template
+      type: image/webp
+  article:
+    tag: Docs
+    section: docs
+    publisher: Demo Starter
+    publishedTime: 2025-08-21T22:00:00.000Z
+    modifiedTime: 2025-08-21T22:00:00.000Z
+title: Get started
+icon: Play
+order: 1
+createdAt: 2025-08-21T22:00:00.000Z
+updatedAt: 2025-08-21T22:00:00.000Z
+sections:
+  - text: Welcome
+    variant: Secondary
+    _template: header
+  - content: >
+      This guide helps you set up the project locally in just a few minutes.
+      You’ll install dependencies, run the dev server, and learn the basics of
+      the project structure.
+    _template: text
+  - text: Prerequisites
+    variant: Secondary
+    _template: header
+  - content: |
+      Make sure you have the following installed:
+
+      * Node.js (LTS recommended)
+      * Yarn or npm
+      * Git
+    _template: text
+  - content: |
+      If you don’t have `yarn`, install it globally:
+    _template: infoBlock
+  - language: bash
+    code: npm install -g yarn
+    _template: codeBlock
+  - text: Install & Run
+    variant: Secondary
+    _template: header
+  - language: bash
+    code: |-
+      # Clone the repo
+      git clone https://github.com/your-org/your-repo.git
+
+      cd your-repo
+
+      # Install dependencies
+      yarn install
+
+      # Start dev server
+      yarn dev
+    _template: codeBlock
+  - content: |
+      The app should now be running at `http://localhost:3000`.
+    _template: infoBlock
+  - text: Project Structure
+    variant: Secondary
+    _template: header
+  - content: |
+      The main folders are:
+
+      * `app/` - App Router pages and layouts
+      * `components/` - shared UI components
+      * `content/` - markdown/MDX content for blog and docs
+      * `cms/` - CMS configuration and collections
+      * `lib/` - utilities and helpers
+    _template: text
+  - text: Next Steps
+    variant: Secondary
+    _template: header
+  - content: |
+      * Explore **Features** to see what’s included
+      * Open **CMS → Docs** to edit documentation
+      * Check **Deployment** for going live
+    _template: text
+---
+

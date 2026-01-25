@@ -1,0 +1,155 @@
+---
+seo:
+  title: CMS → Docs
+  description: >-
+    Manage and structure documentation with a visual CMS. Create modular docs
+    using headers, text, images, notes, and code.
+  author: John Doe
+  keywords: >-
+    docs cms, headless cms, visual editing, markdown docs, realtime preview,
+    content blocks, mdx documentation
+  robots: true
+  openGraph:
+    locale: en_US
+    type: article
+    siteName: Demo Starter
+    updatedTime: 2025-08-21T22:00:00.000Z
+    title: CMS Docs
+    description: Build and edit docs visually with MDX and a section-based CMS.
+    image:
+      url: /1280x640.webp
+      width: 1280
+      height: 640
+      alt: Visual CMS Documentation
+      type: image/webp
+  article:
+    tag: Docs
+    section: docs
+    publisher: Demo Starter
+    publishedTime: 2025-08-21T22:00:00.000Z
+    modifiedTime: 2025-08-21T22:00:00.000Z
+title: Docs
+order: 1
+createdAt: 2025-08-21T22:00:00.000Z
+updatedAt: 2025-08-21T22:00:00.000Z
+sections:
+  - text: Docs managed with a visual CMS
+    variant: Secondary
+    _template: header
+  - content: >
+      Use a visual CMS to create and edit documentation pages. Each doc lives in
+      `content/docs` as **MDX** and is built from an ordered **Sections** list.
+    _template: text
+  - text: How docs are stored
+    variant: Secondary
+    _template: header
+  - content: |
+      Files are saved as `content/docs/<slug>.mdx`. Slugs come from the Title.
+      SEO fields and timestamps are created automatically.
+    _template: text
+  - content: >
+      Avoid renaming files by hand. Change the Title and let the CMS update the
+      slug for you.
+    _template: infoBlock
+  - language: typescript
+    code: |-
+      // tina/collections/docs.ts
+      export const docs = {
+        name: 'doc',
+        path: 'content/docs',
+        format: 'mdx',
+        ui: {
+          filename: {
+            readonly: false,
+            slugify: (values: any) =>
+              values.title ? slugify(values.title, { lower: true, trim: true }) : ''
+          }
+        }
+      };
+    _template: codeBlock
+  - text: Section types
+    variant: Secondary
+    _template: header
+  - content: |
+      * Header - section divider
+      * Text - paragraphs, lists, links, inline code
+      * Image - screenshots with a Source
+      * Info block - tips, notes, warnings
+      * Code block - copy-pasteable examples
+    _template: text
+  - text: Example image section
+    variant: Secondary
+    _template: header
+  - content: |
+      Example docs layout with header, text, and navigation.
+    _template: text
+  - src: /800x600.png
+    alt: 'Example docs layout with header, text, and navigation'
+    width: 800
+    height: 600
+    source:
+      title: aSaaSin.dev
+      url: 'https://asaisin.dev'
+    _template: image
+  - content: |
+      Add clear alt text for every image. Explain what the reader learns.
+    _template: infoBlock
+  - text: Create a new doc
+    variant: Secondary
+    _template: header
+  - content: |
+      1. In the CMS, open **Documentation → Create New**
+      2. Enter **Title** and **Order** (use 10, 20, 30…)
+      3. Add **Sections** (start with a Header, then Text)
+      4. **Save** — the CMS commits the file to your repo
+    _template: text
+  - language: typescript
+    code: |-
+      export const frontmatter = {
+        title: 'Getting Started',
+        icon: 'BookText',
+        order: 10,
+        sections: [
+          { _template: 'header', title: 'Welcome' },
+          { _template: 'text', content: 'Install dependencies and run dev.' },
+          { _template: 'codeBlock', language: 'bash', code: 'pnpm install\npnpm dev' }
+        ]
+      };
+    _template: codeBlock
+  - content: >
+      Use order values like 10, 20, 30 so you can insert pages later without
+      renumbering all.
+    _template: infoBlock
+  - text: Rendering sections
+    variant: Secondary
+    _template: header
+  - content: |
+      The app maps each section’s \_template to a React component.
+    _template: text
+  - language: typescript
+    code: |-
+      export function RenderSections({ sections }) {
+        return sections?.map((s, i) => {
+          switch (s._template) {
+            case 'header': return <DocHeader key={i} title={s.title} />;
+            case 'text': return <DocText key={i} content={s.content} />;
+            case 'image': return <DocImage key={i} src={s.src} alt={s.alt} source={s.source} />;
+            case 'infoBlock': return <DocCallout key={i} content={s.content} />;
+            case 'codeBlock': return <DocCode key={i} language={s.language} code={s.code} />;
+            default: return null;
+          }
+        });
+      }
+    _template: codeBlock
+  - text: Authoring tips
+    variant: Secondary
+    _template: header
+  - content: |
+      * Keep one idea per section
+      * Use clear headers
+      * Use Info block for key notes
+      * Keep code minimal and tested
+      * Link to related docs at the end
+    _template: text
+---
+

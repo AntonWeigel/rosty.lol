@@ -1,0 +1,8 @@
+.env*
+node_modules
+
+.next
+.contentlayer
+.vercel
+public
+tina/__generated__

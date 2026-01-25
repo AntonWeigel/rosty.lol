@@ -1,0 +1,748 @@
+---
+seo:
+  title: Landing Page Demo | Starter Template
+  description: >-
+    Preview a modern SaaS landing page demo with sections like pricing, blog,
+    docs, and more. A generic starter setup designed for showcasing features.
+  author: Team
+  keywords: >-
+    SaaS demo template, starter landing page, pricing demo, login example,    
+    blog template, documentation demo, generic SaaS layout
+  robots: true
+  openGraph:
+    locale: en_US
+    type: website
+    siteName: Landing Page Demo
+    updatedTime: 2025-08-19T22:00:00.000Z
+    title: Explore the Demo Landing Page
+    description: >-
+      Try out a sample SaaS landing page demo with pricing, login, changelog,
+      blog, and documentation sections. A flexible starter for any project.
+    image:
+      url: /1280x640.webp
+      width: 1280
+      height: 640
+      alt: Demo template preview
+      type: image/webp
+sections:
+  - motto: const saas = new Asaasin();
+    headlineIntro: 'Stay inspired,'
+    headlineValue: 'build your idea,'
+    headlineContrast: not boilerplate
+    subheadline: >-
+      A flexible starter template with everything you need to launch your
+      project and share it online quickly.
+    ctaButton:
+      - label:
+          text: Explore
+          icon: Blocks
+        href: '#features'
+        linkType: internal
+        _template: link
+    media:
+      - src: /landing/600x600.webp
+        alt: Starter Template Demo
+        width: 600
+        height: 600
+        _template: imageMedia
+    socialProof:
+      highlight: '+100'
+      text: aSaaSins already started
+      rating: 5
+      avatars:
+        - image: /landing/avatars/avatar-1.webp
+          name: Alexander Davis
+        - image: /landing/avatars/avatar-2.webp
+          name: Benjamin Thompson
+        - image: /landing/avatars/avatar-3.webp
+          name: Christopher Evans
+        - image: /landing/avatars/avatar-4.webp
+          name: Daniel Parker
+        - image: /landing/avatars/avatar-5.webp
+          name: Michael Johnson
+    _template: hero
+  - label: Yout SaaS Formula
+    stack:
+      - library: NextJS
+      - library: Supabase
+      - library: Polar
+      - library: TinaCMS
+      - library: OpenAI
+      - library: Tailwind
+      - library: ShadcnUi
+    _template: stackFormula
+  - lines:
+      - body: |
+          <highlight text="You've got the idea" /> - but no time to build
+      - body: |
+          Getting help is <highlight text="costly and slow" />
+      - body: |
+          Websites require <highlight text="more setup" /> than expected
+      - body: |
+          You spend days <highlight text="repeating the same tasks" />
+      - body: |
+          Setup drains your <highlight text="energy and momentum" />
+      - body: |
+          <highlight text="Progress stalls" /> before you even launch
+      - body: |
+          <highlight text="Weeks lost" /> and nothing to show for it
+    link:
+      label: There’s a better way
+      href: '#features'
+    _template: painPoints
+  - id: features
+    header:
+      label: Tech Stack
+      title: All-in SaaS
+      subtitle: >-
+        From auth to AI, payments to publishing - skip the setup and focus on
+        your product. aSaaSin gives you the modern stack to launch faster and
+        smarter.
+    defaultTab: setup
+    tabs:
+      - value: setup
+        label: Setup
+        icon: Rocket
+        content:
+          title: Get started instantly
+          listItems:
+            - text: One-click project start
+              type: default
+            - text: Pre-configured basics included
+              type: default
+            - text: Clear folder structure
+              type: default
+            - text: 'Fast setup, no wasted effort'
+              type: accent
+            - text: No more days lost on manual wiring
+              type: disabled
+          image: /landing/tabs/450x300.webp
+          links:
+            - icon: LaptopMinimal
+              label: Demo
+              url: 'https://demo.asaasin.dev'
+            - icon: BookOpen
+              label: Docs
+              url: /docs
+      - value: ui
+        label: UI
+        icon: Palette
+        content:
+          title: Design That Works Out of the Box
+          listItems:
+            - text: Responsive layout
+              type: default
+            - text: Reusable components
+              type: default
+            - text: Dark/light mode ready
+              type: default
+            - text: Save hours on styling setup
+              type: accent
+            - text: No more pixel pushing from scratch
+              type: disabled
+          image: /landing/tabs/450x300.webp
+          links:
+            - icon: LaptopMinimal
+              label: Demo
+              url: 'https://demo.asaasin.dev'
+            - icon: BookText
+              label: Docs
+              url: /docs
+      - value: data
+        label: Data
+        icon: Database
+        content:
+          title: Handle Data Without Hassle
+          listItems:
+            - text: Example schema provided
+              type: default
+            - text: CRUD patterns included
+              type: default
+            - text: Secure access setup
+              type: default
+            - text: Structured from the start
+              type: accent
+            - text: No more messy data handling
+              type: disabled
+          image: /landing/tabs/450x300.webp
+          links:
+            - icon: LaptopMinimal
+              label: Demo
+              url: 'https://demo.asaasin.dev'
+            - icon: BookText
+              label: Docs
+              url: /docs
+      - value: auth
+        label: Auth
+        icon: Lock
+        content:
+          title: User Access Made Simple
+          listItems:
+            - text: Ready-to-use sign-in flow
+              type: default
+            - text: Social login examples
+              type: default
+            - text: Private routes setup
+              type: default
+            - text: Secure flows included
+              type: accent
+            - text: No more reinventing login logic
+              type: disabled
+          image: /landing/tabs/450x300.webp
+          links:
+            - icon: LaptopMinimal
+              label: Demo
+              url: 'https://demo.asaasin.dev'
+            - icon: BookText
+              label: Docs
+              url: /docs
+      - value: api
+        label: API
+        icon: Workflow
+        content:
+          title: APIs Without the Pain
+          listItems:
+            - text: Example endpoints ready
+              type: default
+            - text: REST + GraphQL patterns
+              type: default
+            - text: Error handling setup
+              type: default
+            - text: Tested examples included
+              type: accent
+            - text: No more guessing how to wire requests
+              type: disabled
+          image: /landing/tabs/450x300.webp
+          links:
+            - icon: LaptopMinimal
+              label: Demo
+              url: 'https://demo.asaasin.dev'
+            - icon: BookText
+              label: Docs
+              url: /docs
+      - value: ai
+        label: AI
+        icon: Wrench
+        content:
+          title: 'Smart Tools, Built-In'
+          listItems:
+            - text: Example prompts provided
+              type: default
+            - text: Content generation demo
+              type: default
+            - text: Extensible by design
+              type: default
+            - text: Experiment without setup
+              type: accent
+            - text: No more starting from a blank editor
+              type: disabled
+          image: /landing/tabs/450x300.webp
+          links:
+            - icon: LaptopMinimal
+              label: Demo
+              url: 'https://demo.asaasin.dev'
+            - icon: BookText
+              label: Docs
+              url: /docs
+      - value: more
+        label: More
+        icon: Ellipsis
+        content:
+          title: Extras You’ll Actually Use
+          listItems:
+            - text: Blog and docs starter
+              type: default
+            - text: Example dashboard
+              type: default
+            - text: Prebuilt navigation
+              type: default
+            - text: All-in-one starter
+              type: accent
+            - text: No more juggling separate templates
+              type: disabled
+          image: /landing/tabs/450x300.webp
+          links:
+            - icon: LaptopMinimal
+              label: Demo
+              url: 'https://demo.asaasin.dev'
+            - icon: BookText
+              label: Docs
+              url: /docs
+    _template: featureTabs
+  - header:
+      label: Features
+      title: Build Better SaaS Faster
+      subtitle: >-
+        Everything you need to launch, grow, and scale your SaaS - fully
+        integrated out of the box.
+    features:
+      - icon: ShieldCheck
+        title: Easy Authentication
+        description: >-
+          Set up secure login with ready-to-use flows for accounts, sessions,
+          and access.
+      - icon: CreditCard
+        title: Simple Payments
+        description: >-
+          Start charging users with built-in checkout, subscription, and upgrade
+          examples.
+      - icon: FileText
+        title: Blog Ready
+        description: >-
+          Publish articles with editable content, metadata support, and clean
+          layouts.
+      - icon: Lock
+        title: Access Control
+        description: 'Restrict content or features based on plans, roles, or permissions.'
+      - icon: ChartBar
+        title: Built-In Analytics
+        description: 'Track usage and events with dashboards, charts, and reporting tools.'
+      - icon: LayoutDashboard
+        title: Modular UI
+        description: Quickly build or swap components with a flexible layout system.
+      - icon: BookOpen
+        title: Documentation System
+        description: Ship onboarding docs with a structured sidebar and inline editing.
+      - icon: Database
+        title: Flexible Data Layer
+        description: >-
+          Choose the storage option that fits - with clean and extensible data
+          models.
+    _template: featureGrid
+  - header:
+      label: Essentials
+      title: 'Everything you need, built in'
+      subtitle: >-
+        From real-time editing to fast search and generative AI, aSaaSin gives
+        you everything to create, scale, and ship faster - all in one place.
+    features:
+      - title: Visual CMS Editing
+        description: >-
+          Tweak copy, add new pages, or update sections - all without leaving
+          your site. With TinaCMS built in, anyone on your team can visually
+          edit blog posts, docs, landing pages, and more. Changes are instant,
+          and version-controlled by Git.
+        image:
+          src: /landing/features/450x300.webp
+          position: right
+        badges:
+          - Visual CMS
+          - Inline Editing
+          - Git-Backed
+      - title: Docs Search
+        description: >-
+          Give users instant answers with a fast, full-text search experience
+          across your documentation and blog. Powered by FlexSearch, it supports
+          typo-tolerance, keyword highlighting, and updates as you type - all
+          styled to match your brand.
+        image:
+          src: /landing/features/450x300.webp
+          position: left
+        badges:
+          - Instant Search
+          - FlexSearch
+          - Docs
+      - title: AI Branding
+        description: >-
+          Start with just a name - let AI create a unique color palette,
+          matching font pairings, and a full design theme for your SaaS. Whether
+          you're launching a new idea or rebranding, you'll get an instant,
+          usable style system that feels polished and on-brand.
+        image:
+          src: /landing/features/450x300.webp
+          position: right
+        badges:
+          - AI Branding
+          - Color Palette
+          - Font Pairing
+    _template: featureCards
+  - header:
+      label: Compare
+      title: Why Teams Choose Templates
+      subtitle: >-
+        Most starters only give you code. A complete template gives you a
+        launch-ready product - flexible, easy to edit, and designed to help you
+        move fast.
+    negativeColumn:
+      title: Without a Template
+      listItems:
+        - text: You’ve got the idea - but no time to build
+          type: destructive
+        - text: Extra help is expensive and slow
+          type: destructive
+        - text: 'Progress fades, and so does motivation'
+          type: destructive
+        - text: You waste days setting up the basics
+          type: destructive
+        - text: 'Too many ideas, no way to test them'
+          type: destructive
+        - text: Setup drains your energy quickly
+          type: destructive
+    positiveColumn:
+      title: With a Template
+      listItems:
+        - text: Start your idea fast - no setup needed
+          type: success
+        - text: 'Focus on business, not bugs or boilerplate'
+          type: success
+        - text: Share your work without stress
+          type: success
+        - text: Launch faster and build steady progress
+          type: success
+        - text: Save time and effort
+          type: success
+        - text: Stay motivated by seeing results
+          type: success
+    _template: contrast
+  - header:
+      label: Watch demo
+      title: See It in Action
+      subtitle: >-
+        Preview how your project could look with a simple placeholder video.
+        Replace this with your own demo or walkthrough.
+    videoUrl: /landing/1280x720.mp4
+    posterImage: /landing/1280x720.webp
+    _template: demoVideo
+  - id: pricing
+    header:
+      label: Pricing
+      title: 'Simple, transparent pricing for every project'
+      subtitleBlock:
+        discount: $100 off
+        text: for the first 100 customers (15 left)
+    products:
+      - name: Starter
+        price: 169
+        oldPrice: 269
+        listItems:
+          - text: Core template included
+            type: default
+          - text: Blog and pages ready
+            type: default
+          - text: Email examples
+            type: default
+          - text: Payment integration examples
+            type: default
+          - text: Database connection examples
+            type: default
+          - text: Login and user access flows
+            type: default
+          - text: UI components included
+            type: default
+          - text: Extra page templates
+            type: disabled
+          - text: Extended UI components
+            type: disabled
+          - text: Example integrations
+            type: disabled
+          - text: Community support
+            type: disabled
+          - text: Free future updates
+            type: disabled
+        checkoutButton:
+          - label:
+              text: Get Starter
+            productId: 2eb82928-65ad-4d68-965e-888523745c90
+            _template: buy
+        checkoutNote: Pay once. Build unlimited projects!
+      - name: Ultimate
+        price: 199
+        oldPrice: 299
+        highlightLabel: Popular
+        listItems:
+          - text: Core template included
+            type: default
+          - text: Blog and pages ready
+            type: default
+          - text: Email examples
+            type: default
+          - text: Payment integration examples
+            type: default
+          - text: Database connection examples
+            type: default
+          - text: Login and user access flows
+            type: default
+          - text: UI components included
+            type: default
+          - text: Extra page templates
+            type: accent
+          - text: Extended UI components
+            type: accent
+          - text: Example integrations
+            type: accent
+          - text: Community support
+            type: accent
+          - text: Free future updates
+            type: accent
+            badge: Updated today
+        checkoutButton:
+          - label:
+              text: Get Ultimate
+            productId: 0c93e355-368c-4ba6-9453-c49cb84d8ff2
+            _template: buy
+        checkoutNote: Pay once. Build unlimited projects!
+    _template: product
+  - items:
+      - avatar: /landing/testimonials/testimonial-1.webp
+        name: Alex Johnson
+        useCase: Built a project
+        quote: >-
+          This template made it simple to get started quickly. It was easy to
+          customize and gave us a solid foundation to build on.
+      - avatar: /landing/testimonials/testimonial-2.webp
+        name: Taylor Smith
+        useCase: Launched a site
+        quote: >-
+          Everything worked out of the box. The design looks professional, and
+          setup took far less time than expected.
+      - avatar: /landing/testimonials/testimonial-3.webp
+        name: Jordan Lee
+        useCase: Created a prototype
+        quote: >-
+          I was able to focus on testing ideas instead of setup. The starter
+          structure saved a lot of effort.
+      - avatar: /landing/testimonials/testimonial-4.webp
+        name: Casey Brown
+        useCase: Customized a page
+        quote: >-
+          Clean, flexible, and easy to adapt. It shows how quickly you can have
+          a project ready to share.
+      - avatar: /landing/testimonials/testimonial-5.webp
+        name: Morgan Davis
+        useCase: Tried for a project
+        quote: >-
+          Great structure and simple to use. A solid starting point for
+          different kinds of projects.
+      - avatar: /landing/testimonials/testimonial-6.webp
+        name: Riley Carter
+        useCase: Tested the layout
+        quote: >-
+          The setup feels smooth and intuitive. A good way to see how things can
+          fit together fast.
+      - avatar: /landing/testimonials/testimonial-7.webp
+        name: Jamie Martinez
+        useCase: Built a sample app
+        quote: >-
+          Easy to extend and clear to follow. It really speeds up the early
+          stages of a project.
+      - avatar: /landing/testimonials/testimonial-8.webp
+        name: Sam Green
+        useCase: Designed a product
+        quote: >-
+          Having a structure like this makes the process faster and less
+          stressful. It’s much easier to stay focused.
+    _template: testimonials
+  - header:
+      label: Subscription
+      title: Choose the plan that fits your needs
+      subtitleBlock:
+        discount: Save 20% with annual billing
+        text: All plans include full access to our core features. Upgrade anytime.
+    _template: subscription
+  - header:
+      label: Impact
+      title: See the Difference
+      subtitle: >-
+        Skip setup and focus on results. These are just example numbers to show
+        how you can highlight impact with your own metrics.
+    metrics:
+      - value: 120
+        suffix: ''
+        unit:
+          symbol: ''
+          position: ''
+        label: Hours saved per project
+      - value: 30
+        suffix: +
+        label: Projects launched with this starter
+      - value: 92
+        unit: {}
+        label: Users launched in under 2 weeks
+    _template: keyMetrics
+  - header:
+      label: Showcase
+      title: See What’s Possible
+      subtitle: >-
+        Highlight the products you’ve built with this template. From MVPs to
+        full-scale platforms, show visitors what’s possible.
+    projects:
+      - image: /landing/showcases/450x300.webp
+        name: Flowtics
+        link: 'https://www.asaasin.dev'
+        website: flowtics.io
+      - image: /landing/showcases/450x300.webp
+        name: Wavely
+        link: 'https://www.asaasin.dev'
+        website: wavely.app
+      - image: /landing/showcases/450x300.webp
+        name: Hirely
+        link: 'https://www.asaasin.dev'
+        website: hirely.dev
+      - image: /landing/showcases/450x300.webp
+        name: Promptdeck
+        link: 'https://www.asaasin.dev'
+        website: promptdeck.ai.io
+      - image: /landing/showcases/450x300.webp
+        name: Launchlane
+        link: 'https://www.asaasin.dev'
+        website: launchlane.co
+      - image: /landing/showcases/450x300.webp
+        name: Taskly
+        link: 'https://www.asaasin.dev'
+        website: taskly.so
+    _template: showcase
+  - header:
+      label: Trusted By
+      title: Teams build with aSaaSin
+      subtitle: >-
+        From first-time founders to fast-scaling startups - see why 100+ teams
+        rely on aSaaSin to launch faster and grow with confidence.
+    awards:
+      - type: google
+        href: 'https://www.google.com/'
+      - type: g2
+        href: 'https://www.g2.com/'
+      - type: ProductHunt
+        href: 'https://www.producthunt.com/'
+    logos:
+      - type: netflix
+      - type: coinbase
+      - type: uber
+      - type: monzo
+      - type: maze
+      - type: descript
+    _template: socialProof
+  - header:
+      label: FAQ
+      title: Frequently Asked Questions
+      subtitle: Have another question? Contact me
+    items:
+      - question: What is this template?
+        answer: >
+          This is a demo FAQ section included to show how questions and answers
+          could be tructured your site. You can easily replace these items with
+          your own content.
+      - question: Who can use it?
+        answer: >
+          Anyone. This FAQ is designed as a placeholder, so you can adapt it for
+          your audience - customers, clients, or community members.
+      - question: Can I customize the questions and answers?
+        answer: >
+          Yes. All text, formatting, and layout can be fully customized to fit
+          your needs.
+      - question: Does this include real data?
+        answer: >
+          No. These questions and answers are generic examples meant only to
+          demonstrate the layout.
+      - question: How do I add my own FAQs?
+        answer: >
+          Simply replace the placeholder questions and answers with your actual
+          content. You can add, remove, or reorder items as needed.
+    _template: faq
+  - header:
+      label: Real Stories
+      title: Faster from idea to product
+      subtitle: >-
+        From solo founders to scaling teams, see how builders turn ideas into
+        products - and get real results in days, not months.
+    testimonials:
+      - quote: Made back the cost on launch day. That's rare.
+        avatar: /landing/testimonials/testimonial-grid-1.webp
+        name: Omar S.
+        alias: '@sultanbuilds'
+        source:
+          platform: Gumroad
+          url: 'https://gumroad.com'
+        _template: textTestimonial
+      - quote: >-
+          “I finally launched something real after years of procrastination.
+          aSaaSin made it possible”
+        videoUrl: /landing/testimonials/3x4.mp4
+        posterImage: /landing/testimonials/3x4.webp
+        name: Daniel Romero
+        starRating: 5
+        _template: videoTestimonial
+      - quote: 'Passed $5k in monthly revenue - all solo, thanks to aSaaSin.'
+        image:
+          src: /landing/testimonials/450x300.webp
+          width: 900
+          height: 600
+        avatar: /landing/testimonials/testimonial-grid-3.webp
+        name: Matt Russo
+        _template: textTestimonial
+      - quote: 'aSaaSin helped me stay focused on marketing, not bugs.'
+        avatar: /landing/testimonials/testimonial-grid-2.webp
+        name: Daisy Patel
+        alias: '@daisydev'
+        source:
+          platform: X
+          url: 'https://x.com/home'
+        _template: textTestimonial
+      - quote: 'First launch → 700 users, $3.7k revenue. It’s real.'
+        image:
+          src: /landing/testimonials/300x450.webp
+          width: 600
+          height: 900
+        avatar: /landing/testimonials/testimonial-grid-4.webp
+        name: Mikhail
+        _template: textTestimonial
+      - quote: From idea to product in a weekend. I still can’t believe it.
+        avatar: /landing/testimonials/testimonial-grid-6.webp
+        name: Anna Brückner
+        alias: '@navarcode'
+        source:
+          platform: ProductHunt
+          url: 'https://www.producthunt.com'
+        _template: textTestimonial
+      - quote: 'It’s like having a dev team on standby, but affordable.'
+        avatar: /landing/testimonials/testimonial-grid-7.webp
+        name: Mihai
+        alias: '@mihairad'
+        _template: textTestimonial
+      - quote: Never thought I'd enjoy working on my idea again.
+        avatar: /landing/testimonials/testimonial-grid-5.webp
+        name: Jenny Ko
+        alias: '@frontendjenny'
+        source:
+          platform: ProductHunt
+          url: 'https://www.producthunt.com'
+        _template: textTestimonial
+      - quote: “This replaced my need for a tech cofounder. Game changer”
+        videoUrl: /landing/testimonials/3x4.mp4
+        posterImage: /landing/testimonials/3x4.webp
+        name: Leo Wagner
+        starRating: 5
+        _template: videoTestimonial
+      - quote: “I finally launched after years of overthinking. aSaaSin made it easy”
+        videoUrl: /landing/testimonials/3x4.mp4
+        posterImage: /landing/testimonials/3x4.webp
+        name: Martin Becker
+        starRating: 5
+        _template: videoTestimonial
+      - quote: No more wasting weeks on auth and routing. aSaaSin just works.
+        avatar: /landing/testimonials/testimonial-grid-8.webp
+        name: Carlos Navarro
+        alias: '@navarcode'
+        source:
+          platform: IndieHackers
+          url: 'https://www.indiehackers.com'
+        _template: textTestimonial
+      - quote: 'One template, two launches, and $4k MRR. Worth it.'
+        avatar: /landing/testimonials/testimonial-grid-9.webp
+        name: Alexey
+        alias: '@bigbootstrapped'
+        _template: textTestimonial
+    _template: testimonialsGrid
+  - header:
+      label: Start now
+      title: Turn Ideas Into Reality
+      subtitle: 'Start small, scale fast, and keep moving forward.'
+    ctaButton:
+      - label:
+          text: Get Starter
+        href: '#pricing'
+        linkType: internal
+        _template: link
+    _template: cta
+---
+
