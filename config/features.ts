@@ -7,5 +7,5 @@ export const features = {
   resend: isEnabled('ENABLE_RESEND'),
   openai: isEnabled('ENABLE_OPENAI'),
   polar: isEnabled('ENABLE_POLAR'),
-  maintenance: isEnabled('ENABLE_MAINTENANCE'),
+  maintenance: isEnabled('NEXT_PUBLIC_MAINTENANCE_MODE'),
 };
