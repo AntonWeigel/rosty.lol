@@ -13,10 +13,11 @@ import { LandingSectionsFaq } from '@/tina/__generated__/types';
 
 export const FaqTemplate: React.FC<LandingSectionsFaq> = ({
   id,
+  animation,
   header,
   items,
 }) => (
-  <TemplateSection id={id}>
+  <TemplateSection id={id} animation={animation}>
     {header && (
       <SectionHeader>
         {header.label && (

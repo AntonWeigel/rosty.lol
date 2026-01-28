@@ -9,6 +9,7 @@ import { LandingSectionsHero } from '@/tina/__generated__/types';
 
 export const HeroTemplate: React.FC<LandingSectionsHero> = ({
   id,
+  animation,
   motto,
   headlineIntro,
   headlineValue,
@@ -20,6 +21,7 @@ export const HeroTemplate: React.FC<LandingSectionsHero> = ({
 }) => (
   <TemplateSection
     id={id}
+    animation={animation}
     className="h-[calc(100vh-124px)] max-w-3xl flex-col-reverse gap-14 lg:max-w-5xl lg:flex-row"
   >
     <div className="flex flex-col items-center gap-10 md:items-start lg:w-1/2">

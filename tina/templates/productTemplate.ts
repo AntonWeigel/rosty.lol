@@ -1,6 +1,7 @@
 import { Template } from 'tinacms';
 
 import {
+  animationField,
   checkoutButtonField,
   listItemsField,
   pricingSectionHeaderField,
@@ -12,6 +13,7 @@ export const productTemplate: Template = {
   label: 'Product Section',
   fields: [
     sectionIdField,
+    animationField,
     pricingSectionHeaderField,
     {
       type: 'object',

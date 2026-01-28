@@ -1,6 +1,11 @@
 import { Template } from 'tinacms';
 
-import { imageField, sectionHeaderField, sectionIdField } from '@/tina/fields';
+import {
+  animationField,
+  imageField,
+  sectionHeaderField,
+  sectionIdField,
+} from '@/tina/fields';
 import { positions } from '@/tina/options';
 
 export const featureCardsTemplate: Template = {
@@ -8,6 +13,7 @@ export const featureCardsTemplate: Template = {
   label: 'Feature Cards Section',
   fields: [
     sectionIdField,
+    animationField,
     sectionHeaderField,
     {
       type: 'object',

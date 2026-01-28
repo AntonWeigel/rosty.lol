@@ -18,10 +18,11 @@ const components: Components<{
 
 export const PainPointsTemplate: React.FC<LandingSectionsPainPoints> = ({
   id,
+  animation,
   lines,
   link,
 }) => (
-  <TemplateSection id={id} className="my-16 gap-16">
+  <TemplateSection id={id} animation={animation} className="my-16 gap-16">
     <div className="flex flex-col items-center gap-12 text-center">
       <div className="bg-destructive/20 w-full max-w-xl rounded-2xl p-6 leading-relaxed shadow-md sm:p-8">
         <ul className="flex list-none flex-col items-center gap-3 p-0 text-left">

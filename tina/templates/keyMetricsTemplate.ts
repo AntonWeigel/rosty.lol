@@ -1,6 +1,6 @@
 import { Template } from 'tinacms';
 
-import { sectionHeaderField, sectionIdField } from '@/tina/fields';
+import { animationField, sectionHeaderField, sectionIdField } from '@/tina/fields';
 import { positions } from '@/tina/options';
 
 export const keyMetricsTemplate: Template = {
@@ -8,6 +8,7 @@ export const keyMetricsTemplate: Template = {
   label: 'Key Metrics Section',
   fields: [
     sectionIdField,
+    animationField,
     sectionHeaderField,
     {
       type: 'object',

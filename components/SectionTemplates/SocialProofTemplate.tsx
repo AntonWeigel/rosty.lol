@@ -7,11 +7,12 @@ import { LandingSectionsSocialProof } from '@/tina/__generated__/types';
 
 export const SocialProofTemplate: React.FC<LandingSectionsSocialProof> = ({
   id,
+  animation,
   header,
   awards,
   logos,
 }) => (
-  <TemplateSection id={id}>
+  <TemplateSection id={id} animation={animation}>
     {header && (
       <SectionHeader>
         {header.label && (

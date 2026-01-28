@@ -1,6 +1,6 @@
 import { Template } from 'tinacms';
 
-import { sectionIdField } from '@/tina/fields';
+import { animationField, sectionIdField } from '@/tina/fields';
 import { techStackLibraries } from '@/tina/options';
 
 export const stackFormulaTemplate: Template = {
@@ -8,6 +8,7 @@ export const stackFormulaTemplate: Template = {
   label: 'Stack Formula Section',
   fields: [
     sectionIdField,
+    animationField,
     {
       type: 'string',
       name: 'label',

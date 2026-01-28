@@ -9,6 +9,7 @@ type StackFormulaTemplateProps = LandingSectionsStackFormula;
 
 export const StackFormulaTemplate: React.FC<StackFormulaTemplateProps> = ({
   id,
+  animation,
   label,
   stack,
 }) => {
@@ -33,7 +34,7 @@ export const StackFormulaTemplate: React.FC<StackFormulaTemplateProps> = ({
     .filter(Boolean);
 
   return (
-    <TemplateSection id={id} className="gap-4">
+    <TemplateSection id={id} animation={animation} className="gap-4">
       <SectionLabel>{label}</SectionLabel>
 
       <div className="bg-secondary-light dark:bg-primary-dark flex flex-wrap items-center justify-center gap-4 rounded-3xl p-4 shadow-md sm:gap-6 sm:px-6">

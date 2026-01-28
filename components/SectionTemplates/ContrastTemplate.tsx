@@ -8,11 +8,12 @@ import { LandingSectionsContrast } from '@/tina/__generated__/types';
 
 export const ContrastTemplate: React.FC<LandingSectionsContrast> = ({
   id,
+  animation,
   header,
   negativeColumn,
   positiveColumn,
 }) => (
-  <TemplateSection id={id}>
+  <TemplateSection id={id} animation={animation}>
     {header && (
       <SectionHeader>
         {header.label && (

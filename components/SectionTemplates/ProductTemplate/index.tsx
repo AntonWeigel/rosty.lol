@@ -11,11 +11,12 @@ import { ProductCard } from './ProductCard';
 
 export const ProductTemplate: React.FC<LandingSectionsProduct> = ({
   id,
+  animation,
   header,
   products,
 }) => {
   return (
-    <TemplateSection id={id} className="gap-16" highlighted>
+    <TemplateSection id={id} animation={animation} className="gap-16" highlighted>
       {header && (
         <SectionHeader className="container">
           {header.label && (

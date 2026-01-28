@@ -1,12 +1,13 @@
 import { Template } from 'tinacms';
 
-import { sectionIdField } from '@/tina/fields';
+import { animationField, sectionIdField } from '@/tina/fields';
 
 export const painPointsTemplate: Template = {
   name: 'painPoints',
   label: 'Pain Points Section',
   fields: [
     sectionIdField,
+    animationField,
     {
       label: 'Lines',
       name: 'lines',

@@ -21,6 +21,7 @@ type SubscriptionTemplateProps = LandingSectionsSubscription & {
 
 export const SubscriptionTemplate: React.FC<SubscriptionTemplateProps> = ({
   id,
+  animation,
   header,
   subscriptionPlans,
 }) => {
@@ -70,7 +71,12 @@ export const SubscriptionTemplate: React.FC<SubscriptionTemplateProps> = ({
   };
 
   return (
-    <TemplateSection id={id} className="gap-14" highlighted>
+    <TemplateSection
+      id={id}
+      animation={animation}
+      className="gap-14"
+      highlighted
+    >
       {header && (
         <SectionHeader className="container">
           {header.label && (

@@ -21,6 +21,7 @@ import { cn } from '@/utils';
 
 export const ShowcaseTemplate: React.FC<LandingSectionsShowcase> = ({
   id,
+  animation,
   header,
   projects = [],
 }) => {
@@ -29,7 +30,7 @@ export const ShowcaseTemplate: React.FC<LandingSectionsShowcase> = ({
   const isMobile = useScreenBreakpoint(Screen.sm);
 
   return (
-    <TemplateSection id={id} className="w-screen sm:w-full">
+    <TemplateSection id={id} animation={animation} className="w-screen sm:w-full">
       {header && (
         <SectionHeader className="px-4 sm:px-0">
           {header.label && (

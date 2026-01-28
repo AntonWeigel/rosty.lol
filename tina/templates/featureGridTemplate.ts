@@ -1,6 +1,6 @@
 import { Template } from 'tinacms';
 
-import { sectionHeaderField, sectionIdField } from '@/tina/fields';
+import { animationField, sectionHeaderField, sectionIdField } from '@/tina/fields';
 import { lucideIcons } from '@/tina/options';
 
 export const featureGridTemplate: Template = {
@@ -8,6 +8,7 @@ export const featureGridTemplate: Template = {
   label: 'Feature Grid Section',
   fields: [
     sectionIdField,
+    animationField,
     sectionHeaderField,
     {
       type: 'object',

@@ -11,9 +11,9 @@ import { VideoTestimonial } from './VideoTestimonial';
 
 export const TestimonialsGridTemplate: React.FC<
   LandingSectionsTestimonialsGrid
-> = ({ id, header, testimonials }) => {
+> = ({ id, animation, header, testimonials }) => {
   return (
-    <TemplateSection id={id} className="mx-auto max-w-screen-xl gap-16">
+    <TemplateSection id={id} animation={animation} className="mx-auto max-w-screen-xl gap-16">
       {header?.title && (
         <SectionHeader>
           {header.label && (

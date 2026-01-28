@@ -1,6 +1,7 @@
 import { Template } from 'tinacms';
 
 import {
+  animationField,
   listItemsField,
   sectionHeaderField,
   sectionIdField,
@@ -11,6 +12,7 @@ export const contrastTemplate: Template = {
   label: 'Contrast Section',
   fields: [
     sectionIdField,
+    animationField,
     sectionHeaderField,
     {
       type: 'object',

@@ -18,6 +18,7 @@ import { useTestimonials } from './useTestimonials';
 
 export const TestimonialsTemplate: React.FC<LandingSectionsTestimonials> = ({
   id,
+  animation,
   header,
   items = [],
 }) => {
@@ -29,7 +30,7 @@ export const TestimonialsTemplate: React.FC<LandingSectionsTestimonials> = ({
   } = useTestimonials();
 
   return (
-    <TemplateSection id={id} className="gap-16 pt-0" highlighted>
+    <TemplateSection id={id} animation={animation} className="gap-16 pt-0" highlighted>
       {header?.title && (
         <SectionHeader>
           {header.label && (

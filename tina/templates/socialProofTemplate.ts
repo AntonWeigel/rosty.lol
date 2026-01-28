@@ -1,6 +1,6 @@
 import { Template } from 'tinacms';
 
-import { sectionHeaderField, sectionIdField } from '@/tina/fields';
+import { animationField, sectionHeaderField, sectionIdField } from '@/tina/fields';
 import { awardKeys, companyKeys } from '@/tina/options';
 
 export const socialProofTemplate: Template = {
@@ -8,6 +8,7 @@ export const socialProofTemplate: Template = {
   label: 'Social Proof Section',
   fields: [
     sectionIdField,
+    animationField,
     sectionHeaderField,
     {
       type: 'object',

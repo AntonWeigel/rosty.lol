@@ -1,3 +1,4 @@
+export * from './animationField';
 export * from './authorField';
 export * from './buttonLabelField';
 export * from './checkoutButtonField';

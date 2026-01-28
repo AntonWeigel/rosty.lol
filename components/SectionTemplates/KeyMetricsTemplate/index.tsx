@@ -10,11 +10,12 @@ import { MetricCard } from './MetricCard';
 
 export const KeyMetricsTemplate: React.FC<LandingSectionsKeyMetrics> = ({
   id,
+  animation,
   header,
   metrics,
 }) => {
   return (
-    <TemplateSection id={id}>
+    <TemplateSection id={id} animation={animation}>
       {header && (
         <SectionHeader>
           {header.label && (

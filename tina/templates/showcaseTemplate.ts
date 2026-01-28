@@ -1,12 +1,17 @@
 import { Template } from 'tinacms';
 
-import { sectionHeaderField, sectionIdField } from '@/tina/fields';
+import {
+  animationField,
+  sectionHeaderField,
+  sectionIdField,
+} from '@/tina/fields';
 
 export const showcaseTemplate: Template = {
   name: 'showcase',
   label: 'Showcase Section',
   fields: [
     sectionIdField,
+    animationField,
     sectionHeaderField,
     {
       type: 'object',

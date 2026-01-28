@@ -1,6 +1,10 @@
 import { Template } from 'tinacms';
 
-import { sectionHeaderField, sectionIdField } from '@/tina/fields';
+import {
+  animationField,
+  sectionHeaderField,
+  sectionIdField,
+} from '@/tina/fields';
 import { textTestimonialTemplate } from '@/tina/templates/textTestimonialTemplate';
 import { videoTestimonialTemplate } from '@/tina/templates/videoTestimonialTemplate';
 
@@ -9,6 +13,7 @@ export const testimonialsGridTemplate: Template = {
   label: 'Testimonials Grid',
   fields: [
     sectionIdField,
+    animationField,
     sectionHeaderField,
     {
       type: 'object',

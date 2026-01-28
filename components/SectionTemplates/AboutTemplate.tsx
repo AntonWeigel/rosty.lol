@@ -10,12 +10,13 @@ type AboutTemplateTemplateProps = LandingSectionsAbout;
 
 export const AboutTemplate: React.FC<AboutTemplateTemplateProps> = ({
   id,
+  animation,
   header,
   description,
   image,
   badges,
 }) => (
-  <TemplateSection id={id} className="gap-8">
+  <TemplateSection id={id} animation={animation} className="gap-8">
     {header && (
       <SectionHeader className="max-w-3xl">
         {header.label && (

@@ -10,10 +10,11 @@ import { cn } from '@/utils';
 
 export const FeatureCardsTemplate: React.FC<LandingSectionsFeatureCards> = ({
   id,
+  animation,
   header,
   features,
 }) => (
-  <TemplateSection id={id} className="gap-16">
+  <TemplateSection id={id} animation={animation} className="gap-16">
     {header && (
       <SectionHeader>
         {header.label && (

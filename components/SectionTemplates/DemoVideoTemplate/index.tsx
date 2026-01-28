@@ -12,6 +12,7 @@ import { useVideoPlayer } from './useVideoPlayer';
 
 export const DemoVideoTemplate: React.FC<LandingSectionsDemoVideo> = ({
   id,
+  animation,
   header,
   videoUrl,
   posterImage,
@@ -29,7 +30,7 @@ export const DemoVideoTemplate: React.FC<LandingSectionsDemoVideo> = ({
   } = useVideoPlayer();
 
   return (
-    <TemplateSection id={id} className="mb-24">
+    <TemplateSection id={id} animation={animation} className="mb-24">
       {header && (
         <SectionHeader>
           {header.label && (

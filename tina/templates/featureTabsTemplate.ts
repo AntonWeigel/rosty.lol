@@ -1,6 +1,7 @@
 import { Template } from 'tinacms';
 
 import {
+  animationField,
   listItemsField,
   sectionHeaderField,
   sectionIdField,
@@ -12,6 +13,7 @@ export const featureTabsTemplate: Template = {
   label: 'Feature Tabs Section',
   fields: [
     sectionIdField,
+    animationField,
     sectionHeaderField,
     {
       type: 'string',

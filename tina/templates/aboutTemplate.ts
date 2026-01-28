@@ -1,12 +1,18 @@
 import { Template } from 'tinacms';
 
-import { imageField, sectionHeaderField, sectionIdField } from '@/tina/fields';
+import {
+  animationField,
+  imageField,
+  sectionHeaderField,
+  sectionIdField,
+} from '@/tina/fields';
 
 export const aboutTemplate: Template = {
   name: 'about',
   label: 'About Section',
   fields: [
     sectionIdField,
+    animationField,
     sectionHeaderField,
     imageField,
     {

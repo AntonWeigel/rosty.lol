@@ -184,6 +184,15 @@ export enum TechStackLibrary {
   TinaCMS = 'TinaCMS',
 }
 
+export enum SectionAnimation {
+  None = 'none',
+  Fade = 'fade',
+  SlideUp = 'slideUp',
+  SlideLeft = 'slideLeft',
+  SlideRight = 'slideRight',
+  Zoom = 'zoom',
+}
+
 export enum TestimonialsPlatform {
   Gumroad = 'Gumroad',
   IndieHackers = 'IndieHackers',

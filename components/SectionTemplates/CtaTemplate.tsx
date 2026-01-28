@@ -7,10 +7,11 @@ import { LandingSectionsCta } from '@/tina/__generated__/types';
 
 export const CtaTemplate: React.FC<LandingSectionsCta> = ({
   id,
+  animation,
   header,
   ctaButton,
 }) => (
-  <TemplateSection id={id} className="gap-8">
+  <TemplateSection id={id} animation={animation} className="gap-8">
     {header && (
       <SectionHeader>
         {header.label && (

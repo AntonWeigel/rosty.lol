@@ -15,5 +15,6 @@ export * from './openGraphTypes';
 export * from './positions';
 export * from './roadmapCategories';
 export * from './roadmapStatuses';
+export * from './sectionAnimations';
 export * from './techStackLibraries';
 export * from './testimonialPlatforms';

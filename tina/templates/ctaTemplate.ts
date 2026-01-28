@@ -1,6 +1,7 @@
 import { Template } from 'tinacms';
 
 import {
+  animationField,
   ctaButtonField,
   sectionHeaderField,
   sectionIdField,
@@ -9,5 +10,5 @@ import {
 export const ctaTemplate: Template = {
   name: 'cta',
   label: 'Call To Action Section',
-  fields: [sectionIdField, sectionHeaderField, ctaButtonField],
+  fields: [sectionIdField, animationField, sectionHeaderField, ctaButtonField],
 };

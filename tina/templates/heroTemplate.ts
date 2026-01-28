@@ -1,12 +1,18 @@
 import { Template } from 'tinacms';
 
-import { ctaButtonField, mediaField, sectionIdField } from '@/tina/fields';
+import {
+  animationField,
+  ctaButtonField,
+  mediaField,
+  sectionIdField,
+} from '@/tina/fields';
 
 export const heroTemplate: Template = {
   name: 'hero',
   label: 'Hero Section',
   fields: [
     sectionIdField,
+    animationField,
     {
       type: 'string',
       name: 'motto',

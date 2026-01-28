@@ -7,10 +7,11 @@ import { LandingSectionsFeatureGrid } from '@/tina/__generated__/types';
 
 export const FeatureGridTemplate: React.FC<LandingSectionsFeatureGrid> = ({
   id,
+  animation,
   header,
   features,
 }) => (
-  <TemplateSection id={id}>
+  <TemplateSection id={id} animation={animation}>
     {header && (
       <SectionHeader>
         {header.label && (

@@ -18,6 +18,7 @@ import { FooterLinks } from './FooterLinks';
 
 export const FeatureTabsTemplate: React.FC<LandingSectionsFeatureTabs> = ({
   id,
+  animation,
   header,
   defaultTab,
   tabs,
@@ -29,7 +30,7 @@ export const FeatureTabsTemplate: React.FC<LandingSectionsFeatureTabs> = ({
   );
 
   return (
-    <TemplateSection id={id} className="gap-8">
+    <TemplateSection id={id} animation={animation} className="gap-8">
       {header && (
         <SectionHeader className="container">
           {header.label && (
