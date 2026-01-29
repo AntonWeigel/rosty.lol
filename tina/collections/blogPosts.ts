@@ -30,6 +30,7 @@ export const blogPosts: Collection = {
     };
   },
   ui: {
+    router: ({ document }) => `/blog/${document._sys.filename}`,
     allowedActions: {
       createNestedFolder: false,
     },

@@ -48,6 +48,7 @@ export const docs: Collection = {
     };
   },
   ui: {
+    router: ({ document }) => `/docs/${document._sys.breadcrumbs.join('/')}`,
     filename: {
       readonly: false,
       slugify: (values: any) =>

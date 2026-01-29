@@ -10,6 +10,7 @@ export const pages: Collection = {
   path: 'content/pages',
   format: 'mdx',
   ui: {
+    router: ({ document }) => `/${document._sys.filename}`,
     allowedActions: {
       createNestedFolder: false,
     },

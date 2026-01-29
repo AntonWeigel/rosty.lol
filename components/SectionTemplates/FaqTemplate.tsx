@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { tinaField } from 'tinacms/dist/react';
 
 import { RichText } from '@/components/RichText';
 import { SectionHeader } from '@/components/SectionHeader';
@@ -11,38 +12,39 @@ import {
 } from '@/components/ui/Accordion';
 import { LandingSectionsFaq } from '@/tina/__generated__/types';
 
-export const FaqTemplate: React.FC<LandingSectionsFaq> = ({
-  id,
-  animation,
-  header,
-  items,
-}) => (
-  <TemplateSection id={id} animation={animation}>
-    {header && (
-      <SectionHeader>
-        {header.label && (
-          <SectionHeader.Label>{header.label}</SectionHeader.Label>
-        )}
-        <SectionHeader.Title>{header.title}</SectionHeader.Title>
-        {header.subtitle && (
-          <SectionHeader.Subtitle>{header.subtitle}</SectionHeader.Subtitle>
-        )}
-      </SectionHeader>
-    )}
+export const FaqTemplate: React.FC<LandingSectionsFaq> = (props) => {
+  const { id, animation, header, items } = props;
 
-    <Accordion
-      className="flex w-full max-w-3xl flex-col gap-4"
-      type="single"
-      collapsible
-    >
-      {items.map((item, index) => (
-        <AccordionItem key={item.question} value={`item-${index}`}>
-          <AccordionTrigger>{item.question}</AccordionTrigger>
-          <AccordionContent>
-            <RichText content={item.answer} />
-          </AccordionContent>
-        </AccordionItem>
-      ))}
-    </Accordion>
-  </TemplateSection>
-);
+  return (
+    <TemplateSection id={id} animation={animation}>
+      {header && (
+        <SectionHeader data-tina-field={tinaField(props, 'header')}>
+          {header.label && (
+            <SectionHeader.Label>{header.label}</SectionHeader.Label>
+          )}
+          <SectionHeader.Title>{header.title}</SectionHeader.Title>
+          {header.subtitle && (
+            <SectionHeader.Subtitle>{header.subtitle}</SectionHeader.Subtitle>
+          )}
+        </SectionHeader>
+      )}
+
+      <Accordion
+        className="flex w-full max-w-3xl flex-col gap-4"
+        type="single"
+        collapsible
+      >
+        {items.map((item, index) => (
+          <AccordionItem key={item.question} value={`item-${index}`}>
+            <AccordionTrigger data-tina-field={tinaField(item, 'question')}>
+              {item.question}
+            </AccordionTrigger>
+            <AccordionContent data-tina-field={tinaField(item, 'answer')}>
+              <RichText content={item.answer} />
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </TemplateSection>
+  );
+};

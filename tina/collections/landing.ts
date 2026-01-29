@@ -28,6 +28,7 @@ export const landing: Collection = {
   path: 'content/landing',
   format: 'mdx',
   ui: {
+    router: () => '/',
     allowedActions: {
       create: false,
       delete: false,

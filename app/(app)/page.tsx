@@ -1,45 +1,39 @@
 import { Metadata } from 'next';
-import { draftMode } from 'next/headers';
 import { notFound } from 'next/navigation';
 
-import { LandingPageSections } from '@/components/LandingPageSections';
+import { LandingPageClient } from '@/components/LandingPageClient';
 import { fetchLandingPage } from '@/services/landing';
 import { fetchSubscriptionPlansWithCurrent } from '@/services/subscription';
 import { generateSeoMetadata } from '@/utils';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const page = await fetchLandingPage();
+  const result = await fetchLandingPage();
 
-  if (!page) {
+  if (!result?.data?.landing) {
     return {
       title: 'Page not found',
     };
   }
 
   return generateSeoMetadata({
-    seo: page.seo,
+    seo: result.data.landing.seo,
   });
 }
 
 export default async function Page() {
-  const page = await fetchLandingPage();
+  const result = await fetchLandingPage();
 
-  if (!page) {
+  if (!result?.data?.landing) {
     return notFound();
   }
 
-  const { isEnabled: isPreview } = await draftMode();
-
-  if (isPreview) {
-    return <h1>Preview Mode</h1>;
-  }
-
   const subscriptionPlans = await fetchSubscriptionPlansWithCurrent();
-  const sections = page.sections || [];
 
   return (
-    <LandingPageSections
-      sections={sections}
+    <LandingPageClient
+      query={result.query}
+      variables={result.variables}
+      data={result.data}
       subscriptionPlans={subscriptionPlans}
     />
   );
