@@ -2,6 +2,11 @@
 
 import * as React from 'react';
 import * as RechartsPrimitive from 'recharts';
+import {
+  NameType,
+  Payload,
+  ValueType,
+} from 'recharts/types/component/DefaultTooltipContent';
 
 import { cn } from '@/utils';
 
@@ -126,6 +131,8 @@ const ChartTooltipContent = ({
     nameKey?: string;
     labelKey?: string;
     ref?: React.Ref<HTMLDivElement>;
+    payload?: Payload<ValueType, NameType>[];
+    label?: string;
   }) => {
   const { config } = useChart();
 
@@ -188,7 +195,7 @@ const ChartTooltipContent = ({
 
           return (
             <div
-              key={item.dataKey}
+              key={item.dataKey?.toString() || index}
               className={cn(
                 '[&>svg]:text-neutral flex w-full flex-wrap items-stretch gap-2 [&>svg]:h-2.5 [&>svg]:w-2.5',
                 indicator === 'dot' && 'items-center',
@@ -260,10 +267,11 @@ const ChartLegendContent = ({
   nameKey,
   ref,
 }: React.ComponentProps<'div'> &
-  Pick<RechartsPrimitive.LegendProps, 'payload' | 'verticalAlign'> & {
+  Pick<RechartsPrimitive.LegendProps, 'verticalAlign'> & {
     hideIcon?: boolean;
     nameKey?: string;
     ref?: React.Ref<HTMLDivElement>;
+    payload?: Payload<ValueType, NameType>[];
   }) => {
   const { config } = useChart();
 
@@ -286,7 +294,7 @@ const ChartLegendContent = ({
 
         return (
           <div
-            key={item.value}
+            key={item.value?.toString()}
             className={cn(
               '[&>svg]:text-secondary-dark/50 dark:[&>svg]:text-neutral flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3',
             )}

@@ -1,6 +1,6 @@
 'use client';
 
-import FlexSearch from 'flexsearch';
+import { Document } from 'flexsearch';
 import * as React from 'react';
 
 import { DocIndexData, EnrichedSearchResultUnit, SearchResult } from '@/types';
@@ -23,13 +23,12 @@ export const DocsSearchProvider: React.FC<DocsSearchProviderProps> = ({
   children,
   indexData,
 }) => {
-  const [index, setIndex] = React.useState<FlexSearch.Document<
-    DocIndexData,
-    string[]
+  const [index, setIndex] = React.useState<Document<
+    DocIndexData
   > | null>(null);
 
   React.useEffect(() => {
-    const newIndex = new FlexSearch.Document<DocIndexData, string[]>({
+    const newIndex = new Document<DocIndexData>({
       tokenize: 'forward',
       document: {
         id: 'id',
