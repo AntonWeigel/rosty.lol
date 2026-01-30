@@ -1,4 +1,5 @@
 import { Collection } from '@tinacms/cli';
+import { UICollection } from '@tinacms/schema-tools';
 import slugify from 'slugify';
 
 import { SITE } from '@/config';
@@ -12,24 +13,24 @@ export const blogPosts: Collection = {
   label: 'Blog posts',
   path: 'content/posts',
   format: 'mdx',
-  defaultItem: () => {
-    const now = getDefaultDate();
-    return {
-      author: SITE.author.name,
-      seo: {
-        robots: true,
-        author: SITE.author.name,
-        openGraph: {
-          locale: SITE.locale,
-          type: 'article',
-          siteName: SITE.name,
-          updatedTime: now,
-        },
-      },
-      createdAt: now,
-    };
-  },
   ui: {
+    defaultItem: () => {
+      const now = getDefaultDate();
+      return {
+        author: SITE.author.name,
+        seo: {
+          robots: true,
+          author: SITE.author.name,
+          openGraph: {
+            locale: SITE.locale,
+            type: 'article',
+            siteName: SITE.name,
+            updatedTime: now,
+          },
+        },
+        createdAt: now,
+      };
+    },
     router: ({ document }) => `/blog/${document._sys.filename}`,
     allowedActions: {
       createNestedFolder: false,
@@ -39,7 +40,7 @@ export const blogPosts: Collection = {
       slugify: (values: any) =>
         values.title ? slugify(values.title, { lower: true, trim: true }) : '',
     },
-  },
+  } as UICollection & { defaultItem?: any },
   fields: [
     seoField,
     {

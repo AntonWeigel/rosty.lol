@@ -1,4 +1,5 @@
 import { Collection } from '@tinacms/cli';
+import { UICollection } from '@tinacms/schema-tools';
 import slugify from 'slugify';
 
 import { SITE } from '@/config';
@@ -18,43 +19,43 @@ export const docs: Collection = {
   label: 'Documentation',
   path: 'content/docs',
   format: 'mdx',
-  defaultItem: () => {
-    const now = getDefaultDate();
-    return {
-      seo: {
-        robots: true,
-        author: SITE.author.name,
-        openGraph: {
-          locale: SITE.locale,
-          type: 'article',
-          siteName: SITE.name,
-          updatedTime: now,
-          image: {
-            url: '/1280x640.webp',
-            width: 1280,
-            height: 640,
-            alt: 'Demo Documentation',
-            type: 'image/webp',
+  ui: {
+    defaultItem: () => {
+      const now = getDefaultDate();
+      return {
+        seo: {
+          robots: true,
+          author: SITE.author.name,
+          openGraph: {
+            locale: SITE.locale,
+            type: 'article',
+            siteName: SITE.name,
+            updatedTime: now,
+            image: {
+              url: '/1280x640.webp',
+              width: 1280,
+              height: 640,
+              alt: 'Demo Documentation',
+              type: 'image/webp',
+            },
+          },
+          article: {
+            publisher: SITE.name,
+            publishedTime: now,
+            modifiedTime: now,
           },
         },
-        article: {
-          publisher: SITE.name,
-          publishedTime: now,
-          modifiedTime: now,
-        },
-      },
-      createdAt: now,
-      updatedAt: now,
-    };
-  },
-  ui: {
+        createdAt: now,
+        updatedAt: now,
+      };
+    },
     router: ({ document }) => `/docs/${document._sys.breadcrumbs.join('/')}`,
     filename: {
       readonly: false,
       slugify: (values: any) =>
         values.title ? slugify(values.title, { lower: true, trim: true }) : '',
     },
-  },
+  } as UICollection & { defaultItem?: any },
   fields: [
     seoField,
     {

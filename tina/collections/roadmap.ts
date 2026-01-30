@@ -1,4 +1,5 @@
 import { Collection } from '@tinacms/cli';
+import { UICollection } from '@tinacms/schema-tools';
 import slugify from 'slugify';
 
 import { RoadmapStatus } from '@/constants/enums';
@@ -10,17 +11,17 @@ export const roadmap: Collection = {
   label: 'Roadmap',
   path: 'content/roadmap',
   format: 'mdx',
-  defaultItem: () => ({
-    createdAt: getDefaultDate(),
-    status: RoadmapStatus.New,
-  }),
   ui: {
+    defaultItem: () => ({
+      createdAt: getDefaultDate(),
+      status: RoadmapStatus.New,
+    }),
     filename: {
       readonly: true,
       slugify: (values: any) =>
         values.title ? slugify(values.title, { lower: true, trim: true }) : '',
     },
-  },
+  } as UICollection & { defaultItem?: any },
   fields: [
     {
       type: 'string',

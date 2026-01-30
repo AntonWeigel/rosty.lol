@@ -1,4 +1,5 @@
 import { Collection } from '@tinacms/cli';
+import { UICollection } from '@tinacms/schema-tools';
 import slugify from 'slugify';
 
 import { changelogTags } from '@/tina/options';
@@ -9,11 +10,11 @@ export const changelog: Collection = {
   label: 'Changelog',
   path: 'content/changelog',
   format: 'mdx',
-  defaultItem: () => ({
-    createdAt: getDefaultDate(),
-    tags: [],
-  }),
   ui: {
+    defaultItem: () => ({
+      createdAt: getDefaultDate(),
+      tags: [],
+    }),
     filename: {
       readonly: true,
       slugify: (values: any) =>
@@ -21,7 +22,7 @@ export const changelog: Collection = {
           ? `v${values.version}-${slugify(values.title, { lower: true, trim: true })}`
           : '',
     },
-  },
+  } as UICollection & { defaultItem?: any },
   fields: [
     {
       type: 'string',
