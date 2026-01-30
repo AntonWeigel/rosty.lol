@@ -8,9 +8,9 @@ import {
 } from '@/config/middleware';
 
 /**
- * Main entry point for app middleware.
+ * Main entry point for app proxy.
  */
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   if (features.maintenance) {
     return handleMaintenanceMode(request);
   }
