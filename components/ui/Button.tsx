@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-highlight text-primary-dark shadow-xs hover:bg-highlight/80',
+          'bg-[image:var(--gradient-fire)] text-primary-dark shadow-xs hover:opacity-90',
         accent: 'bg-accent text-primary-light hover:bg-accent/80',
         success: 'bg-success text-primary-light hover:bg-success/80',
         highlight:
@@ -42,7 +42,8 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }

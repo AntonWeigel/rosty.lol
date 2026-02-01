@@ -43,3 +43,8 @@ tina/__generated__
 
 # Search index
 public/docs-search-index.json
+
+.gemini/
+gha-creds-*.json
+.github/*/gemini-*.yml
+.github/*/gemini-*.toml

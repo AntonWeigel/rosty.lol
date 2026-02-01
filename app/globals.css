@@ -5,15 +5,16 @@
 
 @theme {
   /* Custom Colors from colors.ts */
-  --color-highlight: #ffc233;
-  --color-accent: #7a5cfa;
-  --color-neutral: #b8bec9;
-  --color-primary-dark: #1f212c;
-  --color-secondary-dark: #2c2e3a;
-  --color-primary-light: #f5f5f5;
-  --color-secondary-light: #ebebeb;
-  --color-success: #3a9d7a;
-  --color-destructive: #de5245;
+  --color-primary-dark: #0c0c0e;
+  --color-secondary-dark: #18181b;
+  --color-accent: #FF4500;
+  --color-highlight: #FFAA00;
+  --color-neutral: #a8a29e;
+  --color-primary-light: #ffffff;
+  --color-secondary-light: #fafafa;
+  --gradient-fire: linear-gradient(135deg, #FF9500 0%, #FF2E00 100%);
+  --color-destructive: #D32F2F;
+  --color-success: #3B82F6;
 
   /* Animations */
   --animate-accordion-down: accordion-down 0.2s ease-out;

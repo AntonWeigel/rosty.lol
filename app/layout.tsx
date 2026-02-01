@@ -2,14 +2,14 @@ import './globals.css';
 
 import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inconsolata } from 'next/font/google';
 import { getLocale, getMessages } from 'next-intl/server';
 import * as React from 'react';
 
 import { SITE } from '@/config';
 import { AppProviders } from '@/layout';
 
-const inter = Inter({
+const nextFont = Inconsolata({
   subsets: ['latin'],
 });
 
@@ -37,7 +37,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-primary-light text-secondary-dark dark:bg-secondary-dark dark:text-primary-light`}
+        className={`${nextFont.className} bg-primary-light text-secondary-dark dark:bg-secondary-dark dark:text-primary-light`}
       >
         <AppProviders locale={locale} messages={messages}>
           {children}
