@@ -12,9 +12,9 @@
   --color-neutral: #a8a29e;
   --color-primary-light: #ffffff;
   --color-secondary-light: #fafafa;
-  --gradient-fire: linear-gradient(135deg, #FF9500 0%, #FF2E00 100%);
   --color-destructive: #D32F2F;
   --color-success: #3A9D7A;
+  --background-image-fire: linear-gradient(135deg, #FF9500 0%, #FF2E00 100%);
 
   /* Animations */
   --animate-accordion-down: accordion-down 0.2s ease-out;

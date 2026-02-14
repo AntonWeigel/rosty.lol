@@ -1,6 +1,7 @@
 export * from './ApiTokenIcon';
 export * from './CheckIcon';
 export * from './CloseIcon';
+export * from './CoalIcon';
 export * from './DocsIcon';
 export * from './EqualSymbol';
 export * from './FlowCanvasIcon';

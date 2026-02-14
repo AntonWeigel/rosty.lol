@@ -17,8 +17,7 @@ export const ToggleButton: React.FC<ToggleButtonProps> = ({
     <button
       type="button"
       className={cn(
-        'hover:text-highlight text-secondary-dark hover:bg-highlight/10 dark:text-primary-light dark:hover:text-highlight rounded-lg p-2.5 transition-all',
-        'dark:focus:ring-highlight/30',
+        'hover:text-highlight text-secondary-dark dark:text-primary-light dark:hover:text-highlight rounded-lg p-2 transition-all',
         className,
       )}
       {...props}

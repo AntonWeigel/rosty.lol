@@ -7,7 +7,7 @@ import {
   PayPalIcon,
   VisaIcon,
 } from '@/icons/payments';
-import { LogoText } from '@/layout';
+import { Logo } from '@/layout';
 
 export const FooterBrand: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -15,7 +15,7 @@ export const FooterBrand: React.FC = () => {
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-col items-center gap-4 sm:items-start">
-        <LogoText />
+        <Logo />
         <span className="text-secondary-dark dark:text-neutral">
           Build your idea, not boilerplate
         </span>

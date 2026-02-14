@@ -1,9 +1,8 @@
-import { Airplay, UserIcon } from 'lucide-react';
+import { Airplay } from 'lucide-react';
 import Link from 'next/link';
 import * as React from 'react';
 
 import { SignOutButton } from '@/components/SignOutButton';
-import { ToggleButton } from '@/components/ToggleButton';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar';
 import {
   DropdownMenu,
@@ -14,52 +13,19 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/DropdownMenu';
-import { AppRoute, DashboardRoute } from '@/constants/routes';
+import { DashboardRoute } from '@/constants/routes';
 import { UserProfile } from '@/types';
 import { cn, generateAvatarFallback } from '@/utils';
-
-import { Button } from './ui/Button';
+import { useIsMobile } from '@/hooks';
 
 type UserMenuProps = {
   userProfile: UserProfile | null | undefined;
 };
 
 export const UserMenu: React.FC<UserMenuProps> = ({ userProfile }) => {
-  if (!userProfile) {
-    return (
-      <>
-        {/* Desktop */}
-        <div className="hidden gap-4 md:flex">
-          <Button asChild variant="outline">
-            <Link href={AppRoute.SignInPage}>Sign in</Link>
-          </Button>
-          <Button asChild>
-            <Link href={AppRoute.SignUpPage}>Sign up</Link>
-          </Button>
-        </div>
+  const isMobile = useIsMobile();
 
-        {/* Mobile */}
-        <div className="md:hidden">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <ToggleButton icon={<UserIcon />} srText={'Open user menu'} />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent
-              className="dark:bg-primary-dark/50 backdrop-blur-md"
-              side="bottom"
-            >
-              <DropdownMenuItem asChild>
-                <Link href={AppRoute.SignInPage}>Sign in</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href={AppRoute.SignUpPage}>Sign up</Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-      </>
-    );
-  }
+  if (!userProfile) return null;
 
   const fallbackAvatar = generateAvatarFallback(userProfile.name);
 
@@ -69,7 +35,7 @@ export const UserMenu: React.FC<UserMenuProps> = ({ userProfile }) => {
         <button
           type="button"
           className={cn(
-            'group dark:hover:text-highlight hover:text-highlight text-secondary-dark hover:bg-highlight/10 dark:text-primary-light rounded-lg p-1.5 transition-all',
+            'group dark:hover:text-highlight hover:text-highlight text-secondary-dark hover:bg-highlight/10 dark:text-primary-light rounded-full p-1 transition-all',
             'dark:focus:ring-highlight/30',
           )}
         >
@@ -85,6 +51,8 @@ export const UserMenu: React.FC<UserMenuProps> = ({ userProfile }) => {
       <DropdownMenuContent
         className="dark:bg-primary-dark/50 w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-2xl backdrop-blur-md"
         side="bottom"
+        align={isMobile ? 'end' : 'center'}
+        alignOffset={isMobile ? -54 : 0}
       >
         <DropdownMenuLabel className="p-0 font-normal">
           <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">

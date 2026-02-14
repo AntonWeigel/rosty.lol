@@ -11,7 +11,7 @@ const buttonVariants = cva(
       variant: {
         default:
           'bg-accent text-primary-dark shadow-xs hover:brightness-110 hover:shadow-md border-0 hover:bg-accent/80',
-        fire: 'bg-[image:var(--gradient-fire)] text-primary-dark shadow-md border-0 hover:brightness-110 hover:shadow-[0_0_25px_var(--color-accent)]',
+        fire: 'bg-fire text-primary-dark shadow-md border-0 hover:brightness-110 hover:shadow-[0_0_25px_var(--color-accent)]',
         accent: 'bg-accent text-primary-light hover:bg-accent/80',
         success: 'bg-success text-primary-light hover:bg-success/80',
         highlight:

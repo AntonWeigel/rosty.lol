@@ -7,14 +7,10 @@ import * as React from 'react';
 import { UserMenu } from '@/components/UserMenu';
 import { AppRoute } from '@/constants/routes';
 import { useClickOutside, useUserProfile } from '@/hooks';
-import {
-  Logo,
-  LogoText,
-  MenuButton,
-  NavigationMenu,
-  ThemeToggle,
-} from '@/layout';
+import { Logo, ThemeToggle } from '@/layout';
 import { UserProfile } from '@/types';
+import { Button } from '@/components/ui/Button';
+import { CoalIcon } from '@/icons';
 
 type NavbarProps = {
   isAuthEnabled: boolean;
@@ -47,47 +43,41 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="bg-primary-light/80 dark:bg-secondary-dark/80 fixed inset-x-0 top-0 z-40 flex w-full flex-wrap py-3 shadow-sm backdrop-blur-md sm:flex-nowrap sm:justify-start">
+    <header className="fixed inset-x-0 top-0 z-40 container flex flex-wrap items-center justify-between py-3">
       <nav
-        ref={navRef}
-        className="relative mx-auto w-full max-w-[85rem] px-4 sm:flex sm:items-center sm:justify-between"
+        aria-label="Main navigation"
+        className="dark:bg-primary-dark/80 bg-secondary-light/80 relative flex items-center rounded-full px-3 py-1 shadow backdrop-blur-md"
       >
-        <div className="flex w-full items-center justify-between sm:w-auto">
-          <Link
-            href={AppRoute.HomePage}
-            aria-label="Go to the homepage"
-            onClick={closeMobileMenu}
-            className="focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:outline-hidden"
-          >
-            <div className="sm:hidden">
-              <Logo />
+        <Link
+          href={AppRoute.HomePage}
+          aria-label="Go to the homepage"
+          onClick={closeMobileMenu}
+          className="rounded-full p-2"
+        >
+          <Logo />
+        </Link>
+        <ThemeToggle />
+      </nav>
+
+      <nav
+        aria-label="User navigation"
+        className="dark:bg-primary-dark/80 bg-secondary-light/80 relative flex items-center gap-1 rounded-full px-3 py-1 shadow backdrop-blur-md"
+      >
+        {isAuthEnabled ? (
+          <>
+            <UserMenu userProfile={userProfile} />
+            <div className="flex p-1">
+              <div className="bg-fire relative flex size-8 items-center justify-center rounded-full">
+                <CoalIcon className="size-6" />
+                <span className="text-primary-light absolute text-xs font-medium">
+                  0
+                </span>
+              </div>
             </div>
-
-            <div className="hidden sm:block">
-              <LogoText />
-            </div>
-          </Link>
-          <div className="flex items-center gap-2 sm:hidden">
-            {isAuthEnabled && <UserMenu userProfile={userProfile} />}
-            <ThemeToggle />
-            <MenuButton
-              isOpen={isMobileMenuOpen}
-              onClick={toggleMobileMenu}
-              aria-controls="navbar"
-            />
-          </div>
-        </div>
-
-        <NavigationMenu
-          isOpen={isMobileMenuOpen}
-          onLinkClickAction={closeMobileMenu}
-          activeRoute={activeRoute}
-        />
-
-        <div className="hidden gap-4 sm:ml-auto sm:flex sm:items-center">
-          {isAuthEnabled && <UserMenu userProfile={userProfile} />}
-          <ThemeToggle />
-        </div>
+          </>
+        ) : (
+          <Button size="icon">+</Button>
+        )}
       </nav>
     </header>
   );

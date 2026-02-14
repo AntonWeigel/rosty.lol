@@ -2,7 +2,6 @@ export * from './CookieBanner';
 export * from './Footer';
 export * from './LocaleSwitcher';
 export * from './Logo';
-export * from './LogoText';
 export * from './LogoTextSmall';
 export * from './MenuButton';
 export * from './Navbar';
