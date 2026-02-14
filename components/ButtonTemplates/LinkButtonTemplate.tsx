@@ -24,7 +24,7 @@ export const LinkButtonTemplate: React.FC<CtaLinkButtonProps> = ({
   const isExternal = linkType === LinkType.External;
 
   return (
-    <Button size="lg" asChild>
+    <Button size="lg" variant="fire" asChild>
       <Link
         href={href}
         target={isExternal ? '_blank' : undefined}

@@ -5,12 +5,13 @@ import * as React from 'react';
 import { cn } from '@/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium ring-offset-primary-light transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-highlight/30 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-secondary-dark',
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium ring-offset-primary-light transition-all focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-highlight/30 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-secondary-dark',
   {
     variants: {
       variant: {
         default:
-          'bg-[image:var(--gradient-fire)] text-primary-dark shadow-xs hover:opacity-90',
+          'bg-accent text-primary-dark shadow-xs hover:brightness-110 hover:shadow-md border-0 hover:bg-accent/80',
+        fire: 'bg-[image:var(--gradient-fire)] text-primary-dark shadow-md border-0 hover:brightness-110 hover:shadow-[0_0_25px_var(--color-accent)]',
         accent: 'bg-accent text-primary-light hover:bg-accent/80',
         success: 'bg-success text-primary-light hover:bg-success/80',
         highlight:

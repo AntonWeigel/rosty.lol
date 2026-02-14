@@ -14,13 +14,14 @@
   --color-secondary-light: #fafafa;
   --gradient-fire: linear-gradient(135deg, #FF9500 0%, #FF2E00 100%);
   --color-destructive: #D32F2F;
-  --color-success: #3B82F6;
+  --color-success: #3A9D7A;
 
   /* Animations */
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
   --animate-vote-shake: vote-shake 0.25s ease-in-out;
   --animate-scale-pop: scale-pop 400ms ease-out;
+  --animate-spin-slow: spin 3s linear infinite;
 
   @keyframes accordion-down {
     from {
@@ -62,6 +63,11 @@
     }
     100% {
       transform: scale(1);
+    }
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
     }
   }
 }

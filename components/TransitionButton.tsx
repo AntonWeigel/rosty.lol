@@ -19,7 +19,7 @@ export const TransitionButton: React.FC<TransitionButtonProps> = ({
   children,
   ...props
 }) => (
-  <Button disabled={isPending} {...props}>
+  <Button disabled={isPending} {...props} variant="fire">
     {isPending ? (
       <>
         <Loader className="size-4 animate-spin" />
