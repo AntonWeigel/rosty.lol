@@ -1,39 +1,21 @@
 import * as React from 'react';
 
-import { BuiltWithAsaasin } from '@/components/BuiltWithAsaasin';
-import {
-  ApplePayIcon,
-  MastercardIcon,
-  PayPalIcon,
-  VisaIcon,
-} from '@/icons/payments';
-import { Logo } from '@/layout';
-
 export const FooterBrand: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="flex flex-col gap-8">
-      <div className="flex flex-col items-center gap-4 sm:items-start">
-        <Logo />
-        <span className="text-secondary-dark dark:text-neutral">
-          Build your idea, not boilerplate
-        </span>
-        <div className="flex gap-2">
-          <VisaIcon />
-          <PayPalIcon />
-          <MastercardIcon />
-          <ApplePayIcon />
-        </div>
-      </div>
-      <div className="flex flex-col items-center gap-3 text-xs sm:items-start">
-        <span className="text-secondary-dark dark:text-neutral">
-          Copyright © {currentYear} - All rights reserved
-        </span>
-        <div className="flex gap-2.5">
-          <BuiltWithAsaasin />
-        </div>
-      </div>
+    <div className="text-secondary-dark dark:text-neutral flex flex-col items-center gap-3 text-xs sm:flex-row sm:items-start sm:gap-2">
+      <span>Copyright © {currentYear} - All rights reserved</span>
+      <span className="hidden sm:block">-</span>
+      <span>
+        Built with{' '}
+        <a
+          href="https://asaasin.dev"
+          className="hover:bg-fire underline hover:bg-clip-text hover:text-transparent"
+        >
+          aSaaSin
+        </a>
+      </span>
     </div>
   );
 };

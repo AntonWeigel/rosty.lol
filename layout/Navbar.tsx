@@ -43,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 container flex flex-wrap items-center justify-between py-3">
+    <header className="fixed inset-x-0 top-3 z-40 mx-auto flex w-340 max-w-[calc(100%-32px)] items-center justify-between">
       <nav
         aria-label="Main navigation"
         className="dark:bg-primary-dark/80 bg-secondary-light/80 relative flex items-center rounded-full px-3 py-1 shadow backdrop-blur-md"
@@ -63,7 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         aria-label="User navigation"
         className="dark:bg-primary-dark/80 bg-secondary-light/80 relative flex items-center gap-1 rounded-full px-3 py-1 shadow backdrop-blur-md"
       >
-        {isAuthEnabled ? (
+        {isAuthEnabled && userProfile ? (
           <>
             <UserMenu userProfile={userProfile} />
             <div className="flex p-1">

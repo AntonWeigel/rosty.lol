@@ -19,13 +19,11 @@ import { cn, generateAvatarFallback } from '@/utils';
 import { useIsMobile } from '@/hooks';
 
 type UserMenuProps = {
-  userProfile: UserProfile | null | undefined;
+  userProfile: UserProfile;
 };
 
 export const UserMenu: React.FC<UserMenuProps> = ({ userProfile }) => {
   const isMobile = useIsMobile();
-
-  if (!userProfile) return null;
 
   const fallbackAvatar = generateAvatarFallback(userProfile.name);
 
